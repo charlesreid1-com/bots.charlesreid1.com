@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'charlesreid1'
 
-SITENAME = u'Bots'
+SITENAME = u'charlesreid1 bots'
 
 SITEURL = ''
 
@@ -21,35 +21,47 @@ THEME = 'scurvy-knave-theme'
 # Pelican is designed for files => pages.
 # Use variables (below) to set pieces of pages.
 
+
+H1_COLOR = "#f00"
+
+
 # ---
 
 # description appears between <p> tags, so don't include them
 
-SITE_TITLE = "Cthulhu fhtagn"
-
-SITE_DESCRIPTION = """Ph'nglui mglw'nafh Cthulhu R'lyeh wgah' fhtagn.<br />
-Haflorr'e Cthulhuagl epog ep, 'aiagl lw'nafh mnahn' nalw'nafh<br />
-n'gha gof'nn. Tharanak f's'uhnee Chaugnar shogg Nyarlathotepyar."""
+SITE_TITLE = "bots.charlesreid1.com"
+SITE_DESCRIPTION = "a subdomain for charlesreid1 bots"
 
 # ---
 
 # include <p> tags in the description
 
-ABOUT_TITLE = "About Cthulhu R'lyeh"
+ABOUT_TITLE = "about bots.charlesreid1.com"
 
-ABOUT_DESCRIPTION = """<p class="lead">Lloig nnnron k'yarnak Dagon Chaugnar Faugn fm'latgh shogg.</p>
+ABOUT_DESCRIPTION = """
 
-<p>Stell'bsna Dagon orr'e stell'bsna nnnlw'nafh wgah'n grah'n, Hastur.<br />
-'bthnk ee cnw bug ehye. Shub-niggurath Tsathoggua Nyarlathotep y-syha'h.<p/>
+<p><b>What is a bot?</b></p>
 
-<p>Azathoth R'lyeh orr'e phlegeth grah'n n'ghft, y'hah lw'nafh sll'ha lw'nafh.<br />
-Wgah'n Nyarlathotep f'gof'nn, gotha hupadgh nog r'luhog athgoth ehye ep uh'e.</p>"""
+<p>Broadly, a bot is an autonomous entity that executes a program.<br />
+The bots on this site are principally Twitter bot flocks, 
+as well as Slack bots and Github bots.</p>
+
+<p><b>What is a bot flock?</b></p>
+
+<p>A bot flock is a group of Twitter bots that perform a related task,
+access related data, or otherwise share some structure.<br />
+See below for examples of Twitter bot flocks.</p>
+
+<p><b>Where can I find the bots?</b></p>
+
+<p>Each bot has a home page on bots.charlesreid1.com; see below for links.</p>
+"""
 
 # ---
 
 # include <p> tags in the description
 
-LINKS_TITLE = "Download Cthulhu Tsathoggua"
+LINKS_TITLE = "links on bots.charlesreid1.com"
 
 LINKS_DESCRIPTION = """
 <p>Kadishtu n'ghft gof'nn fm'latgh Azathoth lloig chtenff hafh'drn shoggyar.</p>
@@ -81,10 +93,10 @@ LINKS_BUTTONS = """<p><a href="%s" class="btn btn-default btn-lg"><i class="fa f
 # ---
 
 
-CONTACT_TITLE = "Contact Cthulhu"
+CONTACT_TITLE = "Contact @charlesreid1"
 
 CONTACT_DESCRIPTION = """<p>Get in touch!</p>
-<p><a href="mailto:charles@charlesreid1.com">charles@charlesreid1.com</a></p>
+<p><a href="mailto:charles@charlesreid1.com">charles__at__charlesreid1.com</a></p>
 """
 
 
