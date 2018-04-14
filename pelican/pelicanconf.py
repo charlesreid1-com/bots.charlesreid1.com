@@ -21,9 +21,18 @@ THEME = 'scurvy-knave-theme'
 # Pelican is designed for files => pages.
 # Use variables (below) to set pieces of pages.
 
-
-H1_COLOR = "#f00"
-
+# theme-specific stuff:
+# twitter dark blue: #0084b4
+# twitter blue: #00aced
+# twitter verified blue: #1dcaff
+# twitter translucent blue: #c0deed
+# 
+H1COLOR = "#c0deed"
+ACOLOR = "#00aced"
+AHOVERCOLOR = "#0084b4"
+TEMPLATE_PAGES = {
+    'custom.css' : 'custom.css'
+}
 
 # ---
 
@@ -43,8 +52,8 @@ ABOUT_DESCRIPTION = """
 <p><b>What is a bot?</b></p>
 
 <p>Broadly, a bot is an autonomous entity that executes a program.<br />
-The bots on this site are principally Twitter bot flocks, 
-as well as Slack bots and Github bots.</p>
+The bots on this site are principally Twitter bot flocks.<br />
+Also see <a href="https://twitter.com/horse_ebooks">@horse_ebooks</a>.</p>
 
 <p><b>What is a bot flock?</b></p>
 
