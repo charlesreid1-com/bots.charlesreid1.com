@@ -21,15 +21,11 @@ THEME = 'scurvy-knave-theme'
 # Pelican is designed for files => pages.
 # Use variables (below) to set pieces of pages.
 
-# theme-specific stuff:
-# twitter dark blue: #0084b4
-# twitter blue: #00aced
-# twitter verified blue: #1dcaff
-# twitter translucent blue: #c0deed
-# 
-H1COLOR = "#c0deed"
-ACOLOR = "#00aced"
-AHOVERCOLOR = "#0084b4"
+# bots use nginx green
+INTROCOLOR  = "#fff"
+ACOLOR      = "#aced00"
+AHOVERCOLOR = "#84b400"
+BRIGHTCOLOR = "#caf1d"
 TEMPLATE_PAGES = {
     'custom.css' : 'custom.css'
 }
@@ -48,6 +44,11 @@ SITE_DESCRIPTION = "a subdomain for charlesreid1 bots"
 ABOUT_TITLE = "about bots.charlesreid1.com"
 
 ABOUT_DESCRIPTION = """
+<p>
+<a href="https://git.charlesreid1.com/bots">bots on git.charlesreid1.com</a>
+</p>
+
+<p>&nbsp;</p>
 
 <p><b>What is a bot?</b></p>
 
@@ -55,11 +56,15 @@ ABOUT_DESCRIPTION = """
 The bots on this site are principally Twitter bot flocks.<br />
 Also see <a href="https://twitter.com/horse_ebooks">@horse_ebooks</a>.</p>
 
+<p>&nbsp;</p>
+
 <p><b>What is a bot flock?</b></p>
 
 <p>A bot flock is a group of Twitter bots that perform a related task,
 access related data, or otherwise share some structure.<br />
 See below for examples of Twitter bot flocks.</p>
+
+<p>&nbsp;</p>
 
 <p><b>Where can I find the bots?</b></p>
 
@@ -70,33 +75,77 @@ See below for examples of Twitter bot flocks.</p>
 
 # include <p> tags in the description
 
-LINKS_TITLE = "links on bots.charlesreid1.com"
+def make_links_description():
+    descr = ""
 
-LINKS_DESCRIPTION = """
-<p>Kadishtu n'ghft gof'nn fm'latgh Azathoth lloig chtenff hafh'drn shoggyar.</p>
-<p>Ya nog Azathoth ah R'lyeh Chaugnar hupadgh kn'a hlirgh Nyarlathotep.</p>"""
+    botlinks = {
+            'twitter' : {
+                'Apollo Space Junk Bot Flock' : 'https://twitter.com/charlesreid1/lists/space-junk-botflock',
+                'Paradise Lost Bot Flock' :     'https://twitter.com/charlesreid1/lists/miltonbotflock',
+                'Ginsberg Bot Flock' :          'https://twitter.com/charlesreid1/lists/ginsbergbotflock',
+                'Math Tripos Bot' :             'https://twitter.com/math_tripos'
+            },
 
-FLOCK_URL = "https://twitter.com/charlesreid1/lists/miltonbotflock"
+            'git.charlesreid1.com' : {
+                'Rainbow Mind Machine' :        'https://git.charlesreid1.com/bots/b-rainbow-mind-machine',
+                'Apollo Space Junk Bot Flock' : 'https://git.charlesreid1.com/bots/b-apollo',
+                'Paradise Lost Bot Flock' :     'https://git.charlesreid1.com/bots/b-milton',
+                'Ginsberg Bot Flock' :          'https://git.charlesreid1.com/bots/b-ginsberg',
+                'Math Tripos Bot' :             'https://git.charlesreid1.com/bots/b-tripos'
+            },
 
-LINKS_BUTTONS = """<p><a href="%s" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> Bot Flock</a></p>
-<p>
-<a href="https://twitter.com/milton_book1"  class="btn btn-default btn-lg">@milton_book1</a> &nbsp; &nbsp; &nbsp; 
-<a href="https://twitter.com/milton_book2"  class="btn btn-default btn-lg">@milton_book2</a> &nbsp; &nbsp; &nbsp; 
-<a href="https://twitter.com/milton_book3"  class="btn btn-default btn-lg">@milton_book3</a>
-</p><p>
-<a href="https://twitter.com/milton_book4"  class="btn btn-default btn-lg">@milton_book4</a> &nbsp; &nbsp; &nbsp; 
-<a href="https://twitter.com/milton_book5"  class="btn btn-default btn-lg">@milton_book5</a> &nbsp; &nbsp; &nbsp; 
-<a href="https://twitter.com/milton_book6"  class="btn btn-default btn-lg">@milton_book6</a>
-</p><p>
-<a href="https://twitter.com/milton_book7"  class="btn btn-default btn-lg">@milton_book7</a> &nbsp; &nbsp; &nbsp; 
-<a href="https://twitter.com/milton_book8"  class="btn btn-default btn-lg">@milton_book8</a> &nbsp; &nbsp; &nbsp; 
-<a href="https://twitter.com/milton_book9"  class="btn btn-default btn-lg">@milton_book9</a>
-</p><p>
-<a href="https://twitter.com/milton_book10" class="btn btn-default btn-lg">@milton_book10</a> &nbsp; &nbsp; &nbsp; 
-<a href="https://twitter.com/milton_book11" class="btn btn-default btn-lg">@milton_book11</a> &nbsp; &nbsp; &nbsp; 
-<a href="https://twitter.com/milton_book12" class="btn btn-default btn-lg">@milton_book12</a>
-</p>
-"""%(FLOCK_URL)
+            'pages.charlesreid1.com' : {
+                'Rainbow Mind Machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
+                'Apollo Space Junk Bot Flock' : 'https://pages.charlesreid1.com/apollo',
+                'Paradise Lost Bot Flock' :     'https://pages.charlesreid1.com/milton',
+                'Ginsberg Bot Flock' :          'https://pages.charlesreid1.com/ginsberg',
+                'Math Tripos Bot' :             'https://pages.charlesreid1.com/tripos'
+            },
+
+            'github (mirror)' : {
+                'Rainbow Mind Machine' :        'https://github.com/charlesreid1/rainbow-mind-machine',
+                'Apollo Space Junk Bot Flock' : 'https://github.com/charlesreid1/apollospacejunk',
+                'Paradise Lost Bot Flock' :     'https://github.com/charlesreid1/milton',
+                'Ginsberg Bot Flock' :          'https://github.com/charlesreid1/ginsberg',
+                'Math Tripos Bot' :             'https://github.com/charlesreid1/tripos-bot'
+            },
+
+            'github pages (mirror)' : {
+                'Rainbow Mind Machine' :        'https://charlesreid1.github.io/rainbow-mind-machine',
+                'Apollo Space Junk Bot Flock' : 'https://charlesreid1.github.io/apollospacejunk',
+                'Paradise Lost Bot Flock' :     'https://charlesreid1.github.io/milton',
+                'Ginsberg Bot Flock' :          'https://charlesreid1.github.io/ginsberg',
+                'Math Tripos Bot' :             'https://charlesreid1.github.io/tripos-bot'
+            }
+
+    }
+
+    fa_icons = {
+            'twitter' : '<i class="fa fa-twitter fa-fw"></i>',
+            'git.charlesreid1.com' : '<i class="fa fa-code-fork fa-fw"></i>',
+            'pages.charlesreid1.com' : '<i class="fa fa-file-o fa-fw"></i>',
+            'github (mirror)' : '<i class="fa fa-github fa-fw"></i>',
+            'github pages (mirror)' : '<i class="fa fa-github-square fa-fw"></i>'
+    }
+
+    for key in botlinks.keys():
+        descr += "<h3>charlesreid1 bots on %s:<h3>\n\n"%(key)
+        fa_icon = fa_icons[key]
+
+        links = botlinks[key]
+        for bot_name in links.keys():
+            bot_link = links[bot_name]
+            descr += "<p><a class=\"btn btn-default btn-lg\" href=\"%s\">"%(bot_link)
+            descr += "%s %s"%(fa_icon, bot_name)
+            descr += "</a></p>\n"
+        
+        descr += "\n"
+
+    return descr
+
+LINKS_TITLE = "bot links"
+
+LINKS_DESCRIPTION = make_links_description()
 
 
 # ---
