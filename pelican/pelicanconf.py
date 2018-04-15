@@ -35,11 +35,14 @@ TEMPLATE_PAGES = {
 # description appears between <p> tags, so don't include them
 
 SITE_TITLE = "bots.charlesreid1.com"
+
 SITE_DESCRIPTION = "a subdomain for charlesreid1 bots"
 
 # ---
 
 # include <p> tags in the description
+
+ABOUT_SHORT = "About"
 
 ABOUT_TITLE = "about bots.charlesreid1.com"
 
@@ -143,6 +146,8 @@ def make_links_description():
 
     return descr
 
+LINKS_SHORT = "Links"
+
 LINKS_TITLE = "bot links"
 
 LINKS_DESCRIPTION = make_links_description()
@@ -151,10 +156,12 @@ LINKS_DESCRIPTION = make_links_description()
 # ---
 
 
-CONTACT_TITLE = "Contact @charlesreid1"
+CONTACT_SHORT = "Contact"
+
+CONTACT_TITLE = "Contact charlesreid1"
 
 CONTACT_DESCRIPTION = """<p>Get in touch!</p>
-<p><a href="mailto:charles@charlesreid1.com">charles__at__charlesreid1.com</a></p>
+<p><a href="mailto:charles@charlesreid1.com">charles (at) charlesreid1.com</a></p>
 """
 
 
