@@ -35,8 +35,8 @@ TEMPLATE_PAGES = {
 # description appears between <p> tags, so don't include them
 
 SITE_TITLE = "bots.charlesreid1.com"
-
 SITE_DESCRIPTION = "a subdomain for charlesreid1 bots"
+GITEA_URL = "https://git.charlesreid1.com/charlesreid1/bots.charlesreid1.com"
 
 # ---
 
