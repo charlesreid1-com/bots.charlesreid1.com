@@ -3,7 +3,9 @@
 Static site for pointing the way to bot flocks
 and other bot content.
 
-This page uses a single-page Pelican theme to generate static content. 
+This page uses the single-page single-color Pelican theme [scurvy knave](https://git.charlesreid1.com/charlesreid1/scurvy-knave-theme) for rapid templating and deployment.
+
+scurvy knave inserts bits of html into a single-page HTML template. The bits of html are generated with Python in `pelicanconf.py`.
 
 ## Required Software
 
@@ -25,6 +27,10 @@ python -m http.server 8080
 ```
 
 then visit `localhost:8080` in your browser.
+
+If you are running Python 2, you should run `python -m SimpleHTTPServer 8080`
+
+But _really_ you should run `alias python='python3'`
 
 ## Modify Content
 
