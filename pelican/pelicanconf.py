@@ -97,23 +97,23 @@ def make_links_description():
                 'Math Tripos Bot' :             'https://git.charlesreid1.com/bots/b-tripos'
             },
 
-            'pages.charlesreid1.com' : {
-                'Rainbow Mind Machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
-                'Apollo Space Junk Bot Flock' : 'https://pages.charlesreid1.com/apollo',
-                'Paradise Lost Bot Flock' :     'https://pages.charlesreid1.com/milton',
-                'Ginsberg Bot Flock' :          'https://pages.charlesreid1.com/ginsberg',
-                'Math Tripos Bot' :             'https://pages.charlesreid1.com/tripos'
-            },
+            #'pages.charlesreid1.com' : {
+            #    'Rainbow Mind Machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
+            #    'Apollo Space Junk Bot Flock' : 'https://pages.charlesreid1.com/apollo',
+            #    'Paradise Lost Bot Flock' :     'https://pages.charlesreid1.com/milton',
+            #    'Ginsberg Bot Flock' :          'https://pages.charlesreid1.com/ginsberg',
+            #    'Math Tripos Bot' :             'https://pages.charlesreid1.com/tripos'
+            #},
 
-            'github (mirror)' : {
-                'Rainbow Mind Machine' :        'https://github.com/charlesreid1/rainbow-mind-machine',
-                'Apollo Space Junk Bot Flock' : 'https://github.com/charlesreid1/apollospacejunk',
-                'Paradise Lost Bot Flock' :     'https://github.com/charlesreid1/milton',
-                'Ginsberg Bot Flock' :          'https://github.com/charlesreid1/ginsberg',
-                'Math Tripos Bot' :             'https://github.com/charlesreid1/tripos-bot'
-            },
+            #'github' : {
+            #    'Rainbow Mind Machine' :        'https://github.com/charlesreid1/rainbow-mind-machine',
+            #    'Apollo Space Junk Bot Flock' : 'https://github.com/charlesreid1/apollospacejunk',
+            #    'Paradise Lost Bot Flock' :     'https://github.com/charlesreid1/milton',
+            #    'Ginsberg Bot Flock' :          'https://github.com/charlesreid1/ginsberg',
+            #    'Math Tripos Bot' :             'https://github.com/charlesreid1/tripos-bot'
+            #},
 
-            'github pages (mirror)' : {
+            'github pages' : {
                 'Rainbow Mind Machine' :        'https://charlesreid1.github.io/rainbow-mind-machine',
                 'Apollo Space Junk Bot Flock' : 'https://charlesreid1.github.io/apollospacejunk',
                 'Paradise Lost Bot Flock' :     'https://charlesreid1.github.io/milton',
@@ -127,8 +127,8 @@ def make_links_description():
             'twitter' : '<i class="fa fa-twitter fa-fw"></i>',
             'git.charlesreid1.com' : '<i class="fa fa-code-fork fa-fw"></i>',
             'pages.charlesreid1.com' : '<i class="fa fa-file-o fa-fw"></i>',
-            'github (mirror)' : '<i class="fa fa-github fa-fw"></i>',
-            'github pages (mirror)' : '<i class="fa fa-github-square fa-fw"></i>'
+            'github' : '<i class="fa fa-github fa-fw"></i>',
+            'github pages' : '<i class="fa fa-github-square fa-fw"></i>'
     }
 
     for key in botlinks.keys():
