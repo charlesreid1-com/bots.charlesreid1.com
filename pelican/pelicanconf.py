@@ -21,9 +21,19 @@ INTROCOLOR  = "#fff"
 ACOLOR      = "#aced00"
 AHOVERCOLOR = "#84b400"
 BRIGHTCOLOR = "#caf1d"
+
+# note: custom.css is a template 
+# that is defined in the THEME!
+# it uses the above colors to 
+# decorate the one-pager.
 TEMPLATE_PAGES = {
     'custom.css' : 'custom.css'
 }
+
+# img/ should be in content/
+# it will finally end up 
+# at the path <url>/img
+STATIC_PATHS = ['img']
 
 # ---
 
