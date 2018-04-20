@@ -3,15 +3,10 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'charlesreid1'
-
 SITENAME = u'charlesreid1 bots'
-
 SITEURL = ''
-
 PATH = 'content'
-
 TIMEZONE = 'America/Los_Angeles'
-
 DEFAULT_LANG = u'en'
 
 # --------------8<---------------------
