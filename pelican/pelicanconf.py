@@ -22,6 +22,9 @@ ACOLOR      = "#aced00"
 AHOVERCOLOR = "#84b400"
 BRIGHTCOLOR = "#caf1d"
 
+INTROBKG='theme/img/intro-bg-foyer.jpg'
+LINKSBKG='theme/img/links-bg-books.jpg'
+
 # note: custom.css is a template 
 # that is defined in the THEME!
 # it uses the above colors to 
@@ -81,7 +84,6 @@ See below for examples of Twitter bot flocks.</p>
 
 # ---
 
-# include <p> tags in the description
 
 def make_links_description():
     descr = ""
