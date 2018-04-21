@@ -1,5 +1,6 @@
 # todo
 
+- fix link to git.charlesreid1 add suffix
 - add pointers to source code on hooks home page
 - no mention of bot b-captain-hook anywhere
 - mention flask and blueprints
