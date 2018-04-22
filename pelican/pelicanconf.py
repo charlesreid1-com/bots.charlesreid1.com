@@ -22,12 +22,8 @@ ACOLOR      = "#aced00"
 AHOVERCOLOR = "#84b400"
 BRIGHTCOLOR = "#caf1d"
 
-#INTROBKG='theme/img/intro-bg-foyer.jpg'
-INTROBKG='theme/img/intro-bg-original.jpg'
-#INTROBKG='theme/img/intro-bg-mist.jpg'
-#INTROBKG='theme/img/intro-bg-rigging.jpg'
+INTROBKG='theme/img/intro-bg-garage.jpg'
 LINKSBKG='theme/img/links-bg-gears.jpg'
-#LINKSBKG='theme/img/links-bg-books.jpg'
 
 # note: custom.css is a template 
 # that is defined in the THEME!
