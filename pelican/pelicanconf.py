@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import markdown
 
 AUTHOR = u'charlesreid1'
 SITENAME = u'charlesreid1 bots'
@@ -48,39 +49,45 @@ GITEA_URL = "https://git.charlesreid1.com/charlesreid1/bots.charlesreid1.com"
 
 # ---
 
-# include <p> tags in the description
+about_md = markdown.Markdown(extensions=['extra','codehilite'],
+                             output_format='html4')
 
 ABOUT_SHORT = "About"
 
 ABOUT_TITLE = "about bots.charlesreid1.com"
 
-ABOUT_DESCRIPTION = """
-<p>
-<a href="https://git.charlesreid1.com/bots">bots on git.charlesreid1.com</a>
-</p>
+ABOUT_TEXT = """
+[bots on git.charlesreid1.com](https://git.charlesreid1.com/bots)
 
-<p>&nbsp;</p>
+<br />
 
-<p><b>What is a bot?</b></p>
+**What is a bot?**
 
-<p>Broadly, a bot is an autonomous entity that executes a program.<br />
-The bots on this site are principally Twitter bot flocks.<br />
-Also see <a href="https://twitter.com/horse_ebooks">@horse_ebooks</a>.</p>
+Broadly, a bot is an autonomous entity that executes a program.
 
-<p>&nbsp;</p>
+The bots on this site are mostly Twitter bot flocks.
 
-<p><b>What is a bot flock?</b></p>
+<br />
 
-<p>A bot flock is a group of Twitter bots that perform a related task,
-access related data, or otherwise share some structure.<br />
-See below for examples of Twitter bot flocks.</p>
+**What is a bot flock?**
 
-<p>&nbsp;</p>
+A bot flock is a group of Twitter bots that perform a related task,
+access related data, or otherwise share some structure.
 
-<p><b>Where can I find the bots?</b></p>
+See below for examples of Twitter bot flocks.
 
-<p>Each bot has a home page on bots.charlesreid1.com; see below for links.</p>
+<br />
+
+**Where can I find the bots?**
+
+Each bot has a home page on bots.charlesreid1.com; 
+see below for links.
 """
+
+
+ABOUT_DESCRIPTION = about_md.convert(ABOUT_TEXT)
+
+
 
 # ---
 
@@ -89,6 +96,14 @@ def make_links_description():
     descr = ""
 
     botlinks = {
+            'pages.charlesreid1.com' : {
+                'Rainbow Mind Machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
+                'Apollo Space Junk Bot Flock' : 'https://pages.charlesreid1.com/apollo',
+                'Paradise Lost Bot Flock' :     'https://pages.charlesreid1.com/milton',
+                'Ginsberg Bot Flock' :          'https://pages.charlesreid1.com/ginsberg',
+                'Math Tripos Bot' :             'https://pages.charlesreid1.com/tripos'
+            },
+
             'twitter' : {
                 'Apollo Space Junk Bot Flock' : 'https://twitter.com/charlesreid1/lists/space-junk-botflock',
                 'Paradise Lost Bot Flock' :     'https://twitter.com/charlesreid1/lists/miltonbotflock',
@@ -96,7 +111,7 @@ def make_links_description():
                 'Math Tripos Bot' :             'https://twitter.com/math_tripos'
             },
 
-            'git.charlesreid1.com' : {
+            'git.charlesreid1.com (source)' : {
                 'Rainbow Mind Machine' :        'https://git.charlesreid1.com/bots/b-rainbow-mind-machine',
                 'Apollo Space Junk Bot Flock' : 'https://git.charlesreid1.com/bots/b-apollo',
                 'Paradise Lost Bot Flock' :     'https://git.charlesreid1.com/bots/b-milton',
@@ -104,37 +119,29 @@ def make_links_description():
                 'Math Tripos Bot' :             'https://git.charlesreid1.com/bots/b-tripos'
             },
 
-            #'pages.charlesreid1.com' : {
-            #    'Rainbow Mind Machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
-            #    'Apollo Space Junk Bot Flock' : 'https://pages.charlesreid1.com/apollo',
-            #    'Paradise Lost Bot Flock' :     'https://pages.charlesreid1.com/milton',
-            #    'Ginsberg Bot Flock' :          'https://pages.charlesreid1.com/ginsberg',
-            #    'Math Tripos Bot' :             'https://pages.charlesreid1.com/tripos'
-            #},
+            'github (source)' : {
+                'Rainbow Mind Machine' :        'https://github.com/charlesreid1/rainbow-mind-machine',
+                'Apollo Space Junk Bot Flock' : 'https://github.com/charlesreid1/apollospacejunk',
+                'Paradise Lost Bot Flock' :     'https://github.com/charlesreid1/milton',
+                'Ginsberg Bot Flock' :          'https://github.com/charlesreid1/ginsberg',
+                'Math Tripos Bot' :             'https://github.com/charlesreid1/tripos-bot'
+            },
 
-            #'github' : {
-            #    'Rainbow Mind Machine' :        'https://github.com/charlesreid1/rainbow-mind-machine',
-            #    'Apollo Space Junk Bot Flock' : 'https://github.com/charlesreid1/apollospacejunk',
-            #    'Paradise Lost Bot Flock' :     'https://github.com/charlesreid1/milton',
-            #    'Ginsberg Bot Flock' :          'https://github.com/charlesreid1/ginsberg',
-            #    'Math Tripos Bot' :             'https://github.com/charlesreid1/tripos-bot'
-            #},
-
-            'github pages' : {
-                'Rainbow Mind Machine' :        'https://charlesreid1.github.io/rainbow-mind-machine',
-                'Apollo Space Junk Bot Flock' : 'https://charlesreid1.github.io/apollospacejunk',
-                'Paradise Lost Bot Flock' :     'https://charlesreid1.github.io/milton',
-                'Ginsberg Bot Flock' :          'https://charlesreid1.github.io/ginsberg',
-                'Math Tripos Bot' :             'https://charlesreid1.github.io/tripos-bot'
-            }
+            #'github pages' : {
+            #    'Rainbow Mind Machine' :        'https://charlesreid1.github.io/rainbow-mind-machine',
+            #    'Apollo Space Junk Bot Flock' : 'https://charlesreid1.github.io/apollospacejunk',
+            #    'Paradise Lost Bot Flock' :     'https://charlesreid1.github.io/milton',
+            #    'Ginsberg Bot Flock' :          'https://charlesreid1.github.io/ginsberg',
+            #    'Math Tripos Bot' :             'https://charlesreid1.github.io/tripos-bot'
+            #}
 
     }
 
     fa_icons = {
             'twitter' : '<i class="fa fa-twitter fa-fw"></i>',
-            'git.charlesreid1.com' : '<i class="fa fa-code-fork fa-fw"></i>',
+            'git.charlesreid1.com (source)' : '<i class="fa fa-code-fork fa-fw"></i>',
             'pages.charlesreid1.com' : '<i class="fa fa-file-o fa-fw"></i>',
-            'github' : '<i class="fa fa-github fa-fw"></i>',
+            'github (source)' : '<i class="fa fa-github fa-fw"></i>',
             'github pages' : '<i class="fa fa-github-square fa-fw"></i>'
     }
 
