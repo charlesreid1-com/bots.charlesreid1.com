@@ -98,10 +98,10 @@ def make_links_description():
     botlinks = {
             'pages.charlesreid1.com' : {
                 'Rainbow Mind Machine' :        'https://pages.charlesreid1.com/rainbow-mind-machine',
-                'Apollo Space Junk Bot Flock' : 'https://pages.charlesreid1.com/apollo',
-                'Paradise Lost Bot Flock' :     'https://pages.charlesreid1.com/milton',
-                'Ginsberg Bot Flock' :          'https://pages.charlesreid1.com/ginsberg',
-                'Math Tripos Bot' :             'https://pages.charlesreid1.com/tripos'
+                'Apollo Space Junk Bot Flock' : 'https://pages.charlesreid1.com/b-apollo',
+                'Paradise Lost Bot Flock' :     'https://pages.charlesreid1.com/b-milton',
+                'Ginsberg Bot Flock' :          'https://pages.charlesreid1.com/b-ginsberg',
+                'Math Tripos Bot' :             'https://pages.charlesreid1.com/b-tripos'
             },
 
             'twitter' : {
